@@ -1,0 +1,46 @@
+.cvb-nav {
+    background: #fff;
+    padding: 0 10px;
+    position: relative;
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-weight: 300;
+    background: #546E7A;
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 60px;
+        height: 60px;
+        background: url('http://contemporaryvcebiology.com/img/tile-2.svg');
+        background-repeat: no-repeat;
+        background-size: 105%;
+        background-position: center;
+        margin-right: 10px;
+        
+    }
+    a.cvb-logo {
+        color: #fff;
+        text-decoration: none;
+        &.visited {
+            color: #fff;
+        }
+    }
+    @media only screen and (min-width: 64em) {
+        padding: 0.6em 10px 0.6em 140px;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        &:before {
+            position: absolute;
+            z-index: 9999;
+            width: 100px;
+            height: 100px;
+            left: 20px;
+            top: 0;
+        }
+        a.cvb-logo {
+            font-size: 1.2em;
+        }
+    }
+}
