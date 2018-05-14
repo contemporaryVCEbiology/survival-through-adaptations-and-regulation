@@ -235,6 +235,21 @@ figcaption {
     }
 }
 
+table {
+    th {
+        border: 1px solid #666;
+    }
+    td {
+        border-left: 1px solid #666;
+        border-right: 1px solid #666;
+        padding: 0 1em ;
+        vertical-align: top;
+    }
+    tbody {
+        border-bottom: 1px solid #666;
+    }
+}
+
 /* clearfix */
 
 .col-2max:before,
@@ -914,6 +929,7 @@ a.download {
     margin: 1em auto;
     border-radius: 20px;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 a.teachers-kit-download:hover,
 a.download:hover {
