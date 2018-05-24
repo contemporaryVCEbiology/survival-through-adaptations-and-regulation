@@ -1,7 +1,6 @@
 ---
 #Jekyll front matter
 ---
-$header-image: '2232647835_0af2f2597d_z.jpg';
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
 
@@ -335,7 +334,7 @@ table {
     }
 }
 .site-header {
-    background-image: url("../img/#{$header-image}");
+    background-image: url("../img/{{ site.header-image }}");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
