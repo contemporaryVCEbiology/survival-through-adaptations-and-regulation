@@ -754,9 +754,16 @@ ul.tabs li a.current {
 .resources {
     clear: both;
 }
-.resources.flex {
-    display: flex;
-    flex-wrap: wrap;
+@supports (display: flex) {
+    .resources.flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* clearfix */
+    .flex.col-3max:before,
+    .flex.col-3max:after {
+        display: none;
+    }
 }
 .resources .phase {
     margin-bottom: 3em;
