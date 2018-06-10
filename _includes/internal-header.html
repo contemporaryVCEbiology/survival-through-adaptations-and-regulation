@@ -1,16 +1,20 @@
         <header class="site-header">
-            <nav>
-                <ul>
-                    <li><a href="{{ site.baseurl }}/">Home</a></li>
-                    <li {% if page.module == "one" %}class="active"{% endif %} ><a {% if page.module == "one" %}class="active"{% endif %} href="{{ site.baseurl }}/sequence-one/">Module 1</a></li>
-                    <li {% if page.module == "two" %}class="active"{% endif %} ><a {% if page.module == "two" %}class="active"{% endif %} href="{{ site.baseurl }}/sequence-one/module2.html">Module 2</a></li>
-                    <li {% if page.module == "three" %}class="active"{% endif %} ><a {% if page.module == "three" %}class="active"{% endif %} href="{{ site.baseurl }}/sequence-one/module3.html">Module 3</a></li>
-                    <li {% if page.module == "four" %}class="active"{% endif %} ><a {% if page.module == "four" %}class="active"{% endif %} href="{{ site.baseurl }}/sequence-one/module4.html">Module 4</a></li>
-                    <li {% if page.module == "five" %}class="active"{% endif %} ><a {% if page.module == "four" %}class="active"{% endif %} href="{{ site.baseurl }}/sequence-one/module5.html">Module 5</a></li>
-                </ul>
-            </nav>
             <div class="heading">
-                <div class="siteHeading">Survival Through Adaptations and Regulation</div>
+                <div class="siteHeading"><a href="{{ site.baseurl }}/">{{ site.siteHeading }}</a></div>
                 <p>for VCE Biology</p>
             </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ site.baseurl }}/">Home</a></li>
+                    <li><a {% if page.parent == "sequence-one" %}class="active"{% endif %} href="{{ site.baseurl }}/sequence-one/">Sequence </a>
+                        <ul class="sub-menu {% if page.parent == "sequence-one" %}active{% endif %}">
+                            <li><a {% if page.module == "one" %}class="current"{% endif %} href="{{ site.baseurl }}/sequence-one/index.html">Module 1</a></li>
+                            <li><a {% if page.module == "two" %}class="current"{% endif %} href="{{ site.baseurl }}/sequence-one/module2.html">Module 2</a></li>
+                            <li><a {% if page.module == "three" %}class="current"{% endif %} href="{{ site.baseurl }}/sequence-one/module3.html">Module 3</a></li>
+                            <li><a {% if page.module == "four" %}class="current"{% endif %} href="{{ site.baseurl }}/sequence-one/module4.html">Module 4</a></li>
+                            <li><a {% if page.module == "five" %}class="current"{% endif %} href="{{ site.baseurl }}/sequence-one/module5.html">Module 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </header>
